@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:group3_incentives_app/Transactions/transactions.dart';
+
+import '../Transactions/transactions.dart';
 
 
 GlobalKey homeKey = GlobalKey();

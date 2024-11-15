@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:group3_incentives_app/Startup/themes.dart';
 import 'package:provider/provider.dart';
+import 'package:student_health_tracker/Startup/themes.dart';
 
 import 'package:supabase_flutter/supabase_flutter.dart';
 
