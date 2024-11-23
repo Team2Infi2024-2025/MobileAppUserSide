@@ -29,7 +29,7 @@ class _HomePageState extends State<HomePage> {
             pageIndex = index;
           });
         },
-        children: const [
+        children: [
           // need to input pages here (the classes)
           Transactions()
         ],

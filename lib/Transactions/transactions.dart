@@ -46,7 +46,7 @@ class Transactions extends StatelessWidget {
     },
   ];
 
-  const Transactions({super.key});
+  Transactions({super.key});
 
   @override
   Widget build(BuildContext context) {
