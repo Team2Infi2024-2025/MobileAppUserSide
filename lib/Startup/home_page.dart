@@ -30,7 +30,7 @@ class _HomePageState extends State<HomePage> {
           });
         },
         children: [
-          // need to input pages here
+          // need to input pages here (the classes)
           Transactions()
         ],
       ),
