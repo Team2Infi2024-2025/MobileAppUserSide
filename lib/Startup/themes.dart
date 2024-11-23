@@ -12,7 +12,7 @@ Can always be expanded on
 class Themes {
   static Map<String, ThemeData> themeData = {
     "Lavender": ThemeData(
-      colorScheme: ColorScheme(
+      colorScheme: const ColorScheme(
         //Tile color, Logo Color, button/switch color
         primary: Color.fromRGBO(247, 237, 219, 1),
         //Tile text color
@@ -47,7 +47,7 @@ class Themes {
       ),
     ),
     "Red": ThemeData(
-      colorScheme: ColorScheme(
+      colorScheme: const ColorScheme(
         primary: Color(0xffec6464),
         onPrimary: Colors.white,
         secondary: Color(0xfffdc5c5),
@@ -68,7 +68,7 @@ class Themes {
       ),
     ),
     "Monochrome": ThemeData(
-      colorScheme: ColorScheme(
+      colorScheme: const ColorScheme(
         primary: Color(0xffc4c4c4),
         onPrimary: Colors.black,
         secondary: Color(0xff949494),
@@ -89,7 +89,7 @@ class Themes {
       ),
     ),
     "Dark": ThemeData(
-      colorScheme: ColorScheme(
+      colorScheme: const ColorScheme(
         primary: Color(0xff2a2a2a),
         onPrimary: Color(0xffc5c5c5),
         primaryContainer: Color(0xff565656),
@@ -110,7 +110,7 @@ class Themes {
       ),
     ),
     "Aquamarine": ThemeData(
-      colorScheme: ColorScheme(
+      colorScheme: const ColorScheme(
         //Tile color, Logo Color, button/switch color
         primary: Color(0xff5178ad),
         //Tile text color

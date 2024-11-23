@@ -46,20 +46,22 @@ class Transactions extends StatelessWidget {
     },
   ];
 
+  const Transactions({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Padding(
         padding: const EdgeInsets.only(top: 45.0), // Add padding to the top
         child: Scaffold(
           appBar: AppBar(
-            title: Text('Explore with Marriott'),
+            title: const Text('Explore with Marriott'),
           ),
-          body: SafeArea( // Add SafeArea to prevent overlap with system UI
+          body: const SafeArea( // Add SafeArea to prevent overlap with system UI
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Padding(
-                  padding: const EdgeInsets.all(16.0),
+                  padding: EdgeInsets.all(16.0),
                   child: Text(
                     'Best Destinations',
                     style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),

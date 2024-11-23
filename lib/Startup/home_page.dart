@@ -22,14 +22,14 @@ class _HomePageState extends State<HomePage> {
       body: PageView(
         controller: pageController,
         physics: pageIndex == 0
-            ? NeverScrollableScrollPhysics()
-            : ClampingScrollPhysics(),
+            ? const NeverScrollableScrollPhysics()
+            : const ClampingScrollPhysics(),
         onPageChanged: (index) {
           setState(() {
             pageIndex = index;
           });
         },
-        children: [
+        children: const [
           // need to input pages here (the classes)
           Transactions()
         ],
@@ -68,7 +68,7 @@ class _HomePageState extends State<HomePage> {
     return Container(
       height: 60,
       decoration: BoxDecoration(
-        color: Theme.of(context).colorScheme.surfaceVariant,
+        color: Theme.of(context).colorScheme.surfaceContainerHighest,
         borderRadius: const BorderRadius.only(
           topLeft: Radius.circular(20),
           topRight: Radius.circular(20),
@@ -110,11 +110,13 @@ class _HomePageState extends State<HomePage> {
 
 
 class AccountPage extends StatelessWidget {
+  const AccountPage({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text('Account')),
-      body: Center(child: Text('Account Page')),
+      appBar: AppBar(title: const Text('Account')),
+      body: const Center(child: Text('Account Page')),
     );
   }
 }

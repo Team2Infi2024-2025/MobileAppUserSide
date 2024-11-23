@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:provider/provider.dart';
 import 'package:student_health_tracker/Startup/home_page.dart';
 import 'package:student_health_tracker/Startup/themes.dart';
 
@@ -11,7 +10,7 @@ Future<void> main() async {
     url: 'https://cwuqeskcuzbzxxdkkgno.supabase.co',
     anonKey: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImN3dXFlc2tjdXpienh4ZGtrZ25vIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MzA3NjAyNjEsImV4cCI6MjA0NjMzNjI2MX0.ll5U0251lxqwQU8691ZHXPFnBO8otEQljVYtjvhGCFs',
   );
-  runApp(MyApp());
+  runApp(const MyApp());
 }
 
 // Get a reference your Supabase client
@@ -46,7 +45,7 @@ class MyHomePage extends StatefulWidget {
 
 
 class _MyHomePageState extends State<MyHomePage> {
-  int _selectedIndex = 0;
+  final int _selectedIndex = 0;
 
 
   @override
