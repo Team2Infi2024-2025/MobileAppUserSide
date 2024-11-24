@@ -1,8 +1,12 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
 import 'package:student_health_tracker/Startup/home_page.dart';
 import 'package:student_health_tracker/Startup/themes.dart';
 
 import 'package:supabase_flutter/supabase_flutter.dart';
+
+import '../Helpers/stream_signal.dart';
 
 
 Future<void> main() async {
@@ -16,6 +20,8 @@ Future<void> main() async {
 // Get a reference your Supabase client
 final supabase = Supabase.instance.client;
 
+// Main Stream Controller
+final StreamController<StreamSignal> mainStream = StreamController<StreamSignal>();
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
