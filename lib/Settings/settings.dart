@@ -12,20 +12,6 @@ class Settings extends StatefulWidget {
   Settings({super.key});
 
   static String theme = localStorage.getItem('theme') ?? 'Lavender';
-  static bool budgetText =
-      bool.tryParse(localStorage.getItem('budgetText') ?? '') ?? true;
-  static String savedInfo = localStorage.getItem('savedInfo') ?? 'Time';
-  static List<String> savedInfoOptions = ['Time', 'Cost', 'Season'];
-  static bool savedGrid =
-      bool.tryParse(localStorage.getItem('savedGrid') ?? '') ?? true;
-  static bool smoothCreate =
-      bool.tryParse(localStorage.getItem('smoothCreate') ?? '') ?? false;
-  static bool filterAge =
-      bool.tryParse(localStorage.getItem('filterAge') ?? '') ?? true;
-  static bool filterLocation =
-      bool.tryParse(localStorage.getItem('filterLocation') ?? '') ?? true;
-  static bool filterSeason =
-      bool.tryParse(localStorage.getItem('filterSeason') ?? '') ?? true;
 
   @override
   State<Settings> createState() => _SettingsState();
@@ -119,46 +105,10 @@ class _SettingsState extends State<Settings> {
                 ],
               ),
             ),
-            const SizedBox(height: 5),
-            Container(
-              width: MediaQuery.of(context).size.width,
-              color: Theme.of(context).colorScheme.surface,
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Text("  Information Display",
-                      style: TextStyle(
-                          fontWeight: FontWeight.w500,
-                          fontSize: 25,
-                          color: Theme.of(context).colorScheme.onSurface)),
-                  _buildSwitch('Display Cost as Text', Settings.budgetText,
-                          (bool value) {
-                        Settings.budgetText = value;
-                        localStorage.setItem('budgetText', value.toString());
-                      }),
-                  const SizedBox(height: 10),
-                  _buildDropDown('Saved Ideas Info', false, Settings.savedInfo,
-                      Settings.savedInfoOptions, (value) {
-                        setState(() {
-                          localStorage.setItem('savedInfo', value ?? 'Time');
-                          Settings.savedInfo = value ?? 'Time';
-                        });
-                      }),
-                  _buildSwitch('Saved Page Gridview', Settings.savedGrid,
-                          (bool value) {
-                        Settings.savedGrid = value;
-                        StreamSignal.updateStream(streamController: HomePage.homePageStream);
-                        localStorage.setItem('savedGrid', value.toString());
-                      }),
-                  _buildSwitch('Progressive Idea Customization', Settings.smoothCreate,
-                          (bool value) {
-                        Settings.smoothCreate = value;
-                        StreamSignal.updateStream(streamController: HomePage.homePageStream);
-                        localStorage.setItem('smoothCreate', value.toString());
-                      }),
-                ],
-              ),
-            ),
+
+
+
+
           ],
         ));
   }
