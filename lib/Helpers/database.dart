@@ -1,9 +1,12 @@
 import 'package:supabase_flutter/supabase_flutter.dart';
 
 /*
+
 Database helpers is just used to store various functions used throughout the app
 - just a helper class to prevent having to remake code for basic database functionality
 - also centralizes all interactions with the database
+
+Rather than use a server or other handling, would need to pull in through helper functions anyways.
  */
 
 // create variable for database which will be accessed later

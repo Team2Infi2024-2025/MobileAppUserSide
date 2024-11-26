@@ -1,15 +1,21 @@
+// flutter libraries
 import 'dart:async';
-
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:localstorage/localstorage.dart';
+
+// in project pages
 import 'package:student_health_tracker/Startup/home_page.dart';
 import 'package:student_health_tracker/Startup/themes.dart';
-
 import 'package:supabase_flutter/supabase_flutter.dart';
-
 import '../Helpers/stream_signal.dart';
 
+
+/*
+Dart entrypoint for app.
+
+inits app and home page.
+ */
 
 Future<void> main() async {
   await Supabase.initialize(
@@ -51,18 +57,14 @@ class MyApp extends StatelessWidget {
 
 class MyHomePage extends StatefulWidget {
   const MyHomePage({super.key, required this.title});
-
   final String title;
 
   @override
   State<MyHomePage> createState() => _MyHomePageState();
 }
 
-
 class _MyHomePageState extends State<MyHomePage> {
   final int _selectedIndex = 0;
-
-
 
   @override
   Widget build(BuildContext context) {

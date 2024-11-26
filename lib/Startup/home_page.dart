@@ -10,16 +10,16 @@ import 'package:student_health_tracker/Samples/sample.dart';
 
 import '../Helpers/stream_signal.dart';
 
-
 /*
+
 The main purpose of this class is to make the surrounding bars on the screen.
 - makes the bottom navigation bar
 - makes the top bar
 
- */
+*/
 
 class HomePage extends StatefulWidget {
-  HomePage({Key? key});
+  const HomePage({Key? key});
 
   static StreamController<StreamSignal> homePageStream =
   StreamController<StreamSignal>();
@@ -64,7 +64,10 @@ class HomePageState extends State<HomePage> {
               },
               // list of active pages
               children: [
-                Transactions(),
+                Sample(),
+                Sample(),
+                Sample(),
+                Sample(),
               ],
             ),
             // Where Top Bar is defined

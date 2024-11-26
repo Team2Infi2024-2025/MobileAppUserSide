@@ -1,5 +1,10 @@
 import 'dart:async';
 
+/*
+Sets up content streams neccessary for certain flutter items.
+- particularly dynamic items
+ */
+
 class StreamSignal{
   static Map<StreamController, Map<String, dynamic>> streamData = {};
 

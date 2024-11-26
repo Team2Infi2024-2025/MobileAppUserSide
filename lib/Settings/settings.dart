@@ -6,7 +6,10 @@ import '../Startup/main.dart';
 import '../Startup/themes.dart';
 
 /*
- Sample of a Settomgs page, uses 'themes' to select theme and display theme chosen./
+ Sample of a settings page, uses 'themes' to select theme and display theme chosen.
+ - see themes.dart
+
+ Currently buggy/ known issues
 
 */
 

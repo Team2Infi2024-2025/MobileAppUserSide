@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 
-
 /*
 Themes page
 
@@ -8,9 +7,11 @@ Allows for changing color scheme
 
 Can always be expanded on
 
+Referenced in the account page
  */
 class Themes {
   static Map<String, ThemeData> themeData = {
+    // follow formatting
     "Lavender": ThemeData(
       colorScheme: const ColorScheme(
         //Tile color, Logo Color, button/switch color
@@ -144,17 +145,5 @@ class Themes {
         brightness: Brightness.light,
       ),
     ),
-  };
-  static Map<String, List> themeSettings = {
-    /*
-    navBar3 - Use tertiary for navbar
-    redSprklii - Use red color for Sprklii logo
-    invertSparklii - Use onPrimary for Sparklii Logo
-    shadeLoading - Shades the loading gif with primary
-     */
-    "Red": ['navBar3'],
-    "Monochrome": ['redSprklii'],
-    "Dark" : ['invertSparklii'],
-    "Aquamarine" : ['shadeLoading']
   };
 }

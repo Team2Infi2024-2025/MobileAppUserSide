@@ -2,9 +2,10 @@ import 'package:flutter/material.dart';
 
 /*
   Serves currently as sample page
+  - sample of static content being used and displayed
  */
 
-class Transactions extends StatelessWidget {
+class Sample extends StatelessWidget {
   // sample data
   final List<Map<String, dynamic>> destinations = [
     {
@@ -46,7 +47,7 @@ class Transactions extends StatelessWidget {
     },
   ];
 
-  Transactions({super.key});
+  Sample({super.key});
 
   @override
   Widget build(BuildContext context) {
