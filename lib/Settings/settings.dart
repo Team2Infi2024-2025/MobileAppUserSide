@@ -1,12 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:localstorage/localstorage.dart';
-import 'package:rflutter_alert/rflutter_alert.dart';
-
 import '../Helpers/stream_signal.dart';
-import '../Startup/home_page.dart';
+
 import '../Startup/main.dart';
 import '../Startup/themes.dart';
 
+/*
+ Sample of a Settomgs page, uses 'themes' to select theme and display theme chosen./
+
+*/
 
 class Settings extends StatefulWidget {
   Settings({super.key});
@@ -105,10 +107,6 @@ class _SettingsState extends State<Settings> {
                 ],
               ),
             ),
-
-
-
-
           ],
         ));
   }
