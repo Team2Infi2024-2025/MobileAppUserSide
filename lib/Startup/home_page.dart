@@ -6,7 +6,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:student_health_tracker/Account/account.dart';
 import 'package:student_health_tracker/Settings/settings.dart';
-import 'package:student_health_tracker/Transactions/transactions.dart';
+import 'package:student_health_tracker/Samples/sample.dart';
 
 import '../Helpers/stream_signal.dart';
 
