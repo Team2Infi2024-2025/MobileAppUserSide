@@ -79,7 +79,7 @@ class HomePageState extends State<HomePage> {
               leading: IconButton(
                   onPressed: () {
                     setState(() {
-                      Navigator.push(context, MaterialPageRoute(builder: (context) => Settings()));
+                      Navigator.push(context, CupertinoPageRoute(builder: (context) => Settings()));
                     });
                   },
                   icon: Icon(Icons.settings_outlined,
@@ -89,7 +89,7 @@ class HomePageState extends State<HomePage> {
                 IconButton(
                     onPressed: () {
                       setState(() {
-                        Navigator.push(context, MaterialPageRoute(builder: (context) => Account()));
+                        Navigator.push(context, CupertinoPageRoute(builder: (context) => Account()));
                       });
                     },
                     icon: Icon(Icons.person_outline,

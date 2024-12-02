@@ -1,17 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:localstorage/localstorage.dart';
 import '../Helpers/stream_signal.dart';
-
 import '../Startup/main.dart';
 import '../Startup/themes.dart';
 
-/*
- Sample of a settings page, uses 'themes' to select theme and display theme chosen.
- - see themes.dart
-
- Currently buggy/ known issues
-
-*/
 
 class Settings extends StatefulWidget {
   Settings({super.key});
@@ -23,25 +15,6 @@ class Settings extends StatefulWidget {
 }
 
 class _SettingsState extends State<Settings> {
-  _buildSwitch(String text, bool value, void Function(bool value) onChange) {
-    return Row(
-      children: [
-        const SizedBox(width: 20),
-        Switch(
-            value: value,
-            onChanged: (value) {
-              setState(() {
-                onChange(value);
-              });
-            }),
-        Text("  $text",
-            style: TextStyle(
-                fontWeight: FontWeight.w400,
-                fontSize: 20,
-                color: Theme.of(context).colorScheme.onSurface)),
-      ],
-    );
-  }
 
   _buildDropDown(String text, bool title, String value, List<String> options,
       void Function(String? value) onChange) {
@@ -89,10 +62,7 @@ class _SettingsState extends State<Settings> {
   Widget build(BuildContext context) {
     return Scaffold(
         backgroundColor: Theme.of(context).colorScheme.surface,
-        body: ListView(
-          children: [
-            const SizedBox(height: 10),
-            Container(
+        body: Container(
               width: MediaQuery.of(context).size.width,
               color: Theme.of(context).colorScheme.shadow,
               child: Column(
@@ -109,8 +79,7 @@ class _SettingsState extends State<Settings> {
                       })
                 ],
               ),
-            ),
-          ],
-        ));
+            )
+    );
   }
 }

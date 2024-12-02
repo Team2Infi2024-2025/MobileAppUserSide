@@ -37,7 +37,7 @@ class DataBase {
     }
   }
 
-  // sample of what a methd with db would look like 
+  // sample of what a methd with db would look like
   static Future<void> getCases() async {
     cases = supabase.from('Cases').select() as List<Map>;
   }

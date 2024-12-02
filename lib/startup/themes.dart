@@ -2,12 +2,9 @@ import 'package:flutter/material.dart';
 
 /*
 Themes page
-
 Allows for changing color scheme
-
 Can always be expanded on
-
-Referenced in the account page
+Referenced in the settings page
  */
 class Themes {
   static Map<String, ThemeData> themeData = {
