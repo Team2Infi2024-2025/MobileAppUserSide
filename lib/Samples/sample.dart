@@ -55,7 +55,7 @@ class Sample extends StatelessWidget {
         padding: const EdgeInsets.only(top: 45.0), // Add padding to the top
         child: Scaffold(
           appBar: AppBar(
-            title: const Text('Explore with Marriott'),
+            title: const Text('Sample Text'),
           ),
           body: const SafeArea( // Add SafeArea to prevent overlap with system UI
             child: Column(
@@ -64,7 +64,7 @@ class Sample extends StatelessWidget {
                 Padding(
                   padding: EdgeInsets.all(16.0),
                   child: Text(
-                    'Best Destinations',
+                    'Sample Text',
                     style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
                   ),
                 ),
