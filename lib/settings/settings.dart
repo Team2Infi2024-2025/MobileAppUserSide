@@ -87,8 +87,7 @@ class _SettingsState extends State<Settings> {
                     'App Theme',
                     true,
                     Settings.theme,
-                    Themes.themeData.keys.toList(),
-                        (value) {
+                    Themes.themeData.keys.toList(), (value) {
                       setState(() {
                         localStorage.setItem('theme', value ?? 'Lavender');
                         Settings.theme = value ?? 'Lavender';

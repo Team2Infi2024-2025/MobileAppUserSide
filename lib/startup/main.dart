@@ -13,10 +13,8 @@ import '../Helpers/stream_signal.dart';
 
 /*
 Dart entrypoint for app.
-
 Initializes app, and selects page to run.
-
-In addition, initializes supabase instance
+In addition, initializes supabase instance for the whole application.
  */
 
 Future<void> main() async {
