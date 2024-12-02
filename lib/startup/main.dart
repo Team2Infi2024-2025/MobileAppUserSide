@@ -42,16 +42,21 @@ class MyApp extends StatelessWidget {
   // This widget is the root of the application
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Student Health Tracker',
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-        useMaterial3: true,
-      ),
-      home: FutureBuilder(
-          future: DataBase.init(),
-          builder: (context, snapshot){
-            return const HomePage();})
-    );
+    return StreamBuilder(
+        stream: mainStream.stream,
+        initialData: StreamSignal(streamController: mainStream, newData: {
+        'theme': localStorage.getItem('theme') ?? 'Lavender',
+        }),
+        builder: (context, snapshot) {
+          return MaterialApp(
+            title: 'Student Health Tracker',
+            theme:
+              Themes.themeData[snapshot.data?.data['theme']] ?? Themes.themeData['Lavender'],
+            home: FutureBuilder(
+                future: DataBase.init(),
+                builder: (context, snapshot){
+                  return const HomePage();})
+          );
+        });
   }
 }
