@@ -51,7 +51,7 @@ class MyApp extends StatelessWidget {
       home: FutureBuilder(
           future: DataBase.init(),
           builder: (context, snapshot){
-            return HomePage();})
+            return const HomePage();})
     );
   }
 }

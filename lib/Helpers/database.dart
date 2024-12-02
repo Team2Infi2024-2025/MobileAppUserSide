@@ -1,7 +1,6 @@
 import 'package:supabase_flutter/supabase_flutter.dart';
 
 /*
-
 Database helpers is just used to store various functions used throughout the app
 - just a helper class to prevent having to remake code for basic database functionality
 - also centralizes all interactions with the database
@@ -16,7 +15,7 @@ final SupabaseClient supabase = Supabase.instance.client;
 class DataBase {
 
   // lists and maps to pass data to, currently just samples
-  static List<Map<String, dynamic>> ideas = [];
+  static List<Map> cases = [];
 
   // initialization of db
   static Future<void> init() async {
@@ -36,6 +35,11 @@ class DataBase {
     } catch(e){
       return true;
     }
+  }
+
+  // sample of what a methd with db would look like 
+  static Future<void> getCases() async {
+    cases = supabase.from('Cases').select() as List<Map>;
   }
 
 }
