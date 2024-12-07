@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 /*
   Serves currently as sample page
   - sample of static content being used and displayed
+  - just a simple display file
  */
 
 class Sample extends StatelessWidget {

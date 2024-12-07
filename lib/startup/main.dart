@@ -17,6 +17,11 @@ Initializes app, and selects page to run.
 In addition, initializes supabase instance for the whole application.
  */
 
+
+
+// Main Stream Controller
+final StreamController<StreamSignal> mainStream = StreamController<StreamSignal>();
+
 Future<void> main() async {
   SystemChrome.setPreferredOrientations([
     DeviceOrientation.portraitUp,
@@ -31,8 +36,6 @@ Future<void> main() async {
 // Get a reference your Supabase client
 final supabase = Supabase.instance.client;
 
-// Main Stream Controller
-final StreamController<StreamSignal> mainStream = StreamController<StreamSignal>();
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
