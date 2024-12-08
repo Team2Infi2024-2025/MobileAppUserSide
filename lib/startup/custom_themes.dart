@@ -1,12 +1,15 @@
 import 'package:flutter/material.dart';
 
+import '../Settings/settings.dart';
+
 /*
 Themes page
 Allows for changing color scheme
 Can always be expanded on
 Referenced in the settings page
  */
-class Themes {
+class CustomThemes {
+
   static Map<String, ThemeData> themeData = {
     // follow formatting
     "Lavender": ThemeData(

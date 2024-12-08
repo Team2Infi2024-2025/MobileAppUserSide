@@ -4,13 +4,10 @@ import 'package:rflutter_alert/rflutter_alert.dart';
 
 import '../Helpers/stream_signal.dart';
 import '../Startup/main.dart';
-import '../Startup/themes.dart';
 import '../helpers/global_methods.dart';
 
 class Settings extends StatefulWidget {
   Settings({super.key});
-
-  static String theme = localStorage.getItem('theme') ?? 'Lavender';
 
   @override
   State<Settings> createState() => _SettingsState();
@@ -27,20 +24,18 @@ class _SettingsState extends State<Settings> {
                 fontWeight: FontWeight.w500,
                 fontSize: title ? 25 : 20,
                 height: title ? 1 : 0.9,
-                color: Theme.of(context).colorScheme.onSurface)),
+                color: Colors.black)),
         Row(
           children: [
             const SizedBox(width: 20),
             DropdownButton<String>(
               value: value,
-              icon: Icon(Icons.keyboard_arrow_down,
-                  color: Theme.of(context).colorScheme.onSurface),
+              icon: const Icon(Icons.keyboard_arrow_down, color: Colors.black),
               elevation: 16,
-              style: TextStyle(
-                  color: Theme.of(context).colorScheme.onSurface, fontSize: 20),
+              style: const TextStyle(color: Colors.black, fontSize: 20),
               underline: Container(
                 height: 2,
-                color: Theme.of(context).colorScheme.onSurface,
+                color: Colors.black,
               ),
               onChanged: (String? newValue) {
                 onChange(newValue);
@@ -61,35 +56,14 @@ class _SettingsState extends State<Settings> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor: Theme.of(context).colorScheme.surface,
+        backgroundColor: Colors.white,
         body: ListView(
           children: [
             const SizedBox(height: 10),
-            // App Theme Section
-            Container(
-              width: MediaQuery.of(context).size.width,
-              color: Theme.of(context).colorScheme.shadow,
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  _buildDropDown('App Theme', true, Settings.theme,
-                      Themes.themeData.keys.toList(), (value) {
-                        setState(() {
-                          localStorage.setItem('theme', value ?? 'Lavender');
-                          Settings.theme = value ?? 'Lavender';
-                          StreamSignal.updateStream(
-                              streamController: mainStream,
-                              newData: {"theme": Settings.theme});
-                        });
-                      })
-                ],
-              ),
-            ),
-            const SizedBox(height: 5),
             // Feedback Section
             Container(
               width: MediaQuery.of(context).size.width,
-              color: Theme.of(context).colorScheme.surface,
+              color: Colors.grey[200],
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
@@ -97,7 +71,7 @@ class _SettingsState extends State<Settings> {
                       style: TextStyle(
                           fontWeight: FontWeight.w500,
                           fontSize: 25,
-                          color: Theme.of(context).colorScheme.onSurface)),
+                          color: Colors.black)),
                   TextButton(
                       onPressed: () {
                         Alert(
@@ -135,23 +109,21 @@ class _SettingsState extends State<Settings> {
                       child: Container(
                         padding: const EdgeInsets.all(5),
                         decoration: BoxDecoration(
-                            color: Theme.of(context).colorScheme.primary,
+                            color: Colors.blue,
                             borderRadius: BorderRadius.circular(10)),
                         height: 35,
                         child: Row(
                           mainAxisSize: MainAxisSize.min,
                           crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Icon(Icons.feedback,
-                                color: Theme.of(context).colorScheme.onPrimary),
+                          children: const [
+                            Icon(Icons.feedback, color: Colors.white),
                             Text(
                               ' Give Us Some Feedback! ',
                               style: TextStyle(
                                   fontSize: 20,
                                   fontWeight: FontWeight.w500,
                                   height: 1.2,
-                                  color:
-                                  Theme.of(context).colorScheme.onPrimary),
+                                  color: Colors.white),
                             )
                           ],
                         ),

@@ -7,6 +7,7 @@ import 'package:flutter/material.dart';
 import 'package:student_health_tracker/Account/account.dart';
 import 'package:student_health_tracker/Settings/settings.dart';
 import 'package:student_health_tracker/Samples/sample.dart';
+import 'package:student_health_tracker/helpers/global_widgets.dart';
 
 import '../Helpers/stream_signal.dart';
 
@@ -79,7 +80,10 @@ class HomePageState extends State<HomePage> {
               leading: IconButton(
                   onPressed: () {
                     setState(() {
-                      Navigator.push(context, CupertinoPageRoute(builder: (context) => Settings()));
+                      Navigator.push(
+                          context,
+                          GlobalWidgets.swipePage(Settings(),
+                              title: 'Settings'));
                     });
                   },
                   icon: Icon(Icons.settings_outlined,
@@ -88,9 +92,10 @@ class HomePageState extends State<HomePage> {
               actions: [
                 IconButton(
                     onPressed: () {
-                      setState(() {
-                        Navigator.push(context, CupertinoPageRoute(builder: (context) => Account()));
-                      });
+                      Navigator.push(
+                          context,
+                          GlobalWidgets.swipePage(
+                              Account(), title: 'Account'));
                     },
                     icon: Icon(Icons.person_outline,
                         color: Theme.of(context).colorScheme.onSurface,

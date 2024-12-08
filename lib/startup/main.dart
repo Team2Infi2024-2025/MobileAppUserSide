@@ -7,7 +7,7 @@ import 'package:student_health_tracker/Helpers/database.dart';
 
 // in project pages
 import 'package:student_health_tracker/Startup/home_page.dart';
-import 'package:student_health_tracker/Startup/themes.dart';
+import 'package:student_health_tracker/startup/custom_themes.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
 import '../Helpers/stream_signal.dart';
 
@@ -23,15 +23,20 @@ In addition, initializes supabase instance for the whole application.
 final StreamController<StreamSignal> mainStream = StreamController<StreamSignal>();
 
 Future<void> main() async {
+
+  // set orientation to up
   SystemChrome.setPreferredOrientations([
     DeviceOrientation.portraitUp,
   ]);
-  // on init, run the app
+
+  // wait for local storage
   await initLocalStorage();
+
   if(!mainStream.hasListener){
     runApp(const MyApp());
   }
 }
+
 
 // Get a reference your Supabase client
 final supabase = Supabase.instance.client;
@@ -46,13 +51,13 @@ class MyApp extends StatelessWidget {
     return StreamBuilder(
         stream: mainStream.stream,
         initialData: StreamSignal(streamController: mainStream, newData: {
-        'theme': localStorage.getItem('theme') ?? 'Lavender',
+        'theme': CustomThemes.themeData['Lavender'],
         }),
         builder: (context, snapshot) {
           return MaterialApp(
             title: 'Student Health Tracker',
             theme:
-              Themes.themeData[snapshot.data?.data['theme']] ?? Themes.themeData['Lavender'],
+              CustomThemes.themeData['Lavender'],
             home: FutureBuilder(
                 future: DataBase.init(),
                 builder: (context, snapshot){
