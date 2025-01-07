@@ -1,15 +1,14 @@
-// home page that appears before the other pages
-
-// necessary imports for the project
+// packages
 import 'dart:async';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+
+// pages
 import 'package:student_health_tracker/Account/account.dart';
 import 'package:student_health_tracker/Settings/settings.dart';
 import 'package:student_health_tracker/Samples/sample.dart';
-import 'package:student_health_tracker/helpers/global_widgets.dart';
-
-import '../Helpers/stream_signal.dart';
+import '../global_content/dynamic_content/stream_signal.dart';
+import '../global_content/static_content/global_widgets.dart';
 
 /*
 
@@ -23,7 +22,7 @@ class HomePage extends StatefulWidget {
   const HomePage({Key? key});
 
   static StreamController<StreamSignal> homePageStream =
-  StreamController<StreamSignal>();
+    StreamController<StreamSignal>();
 
   @override
   State<HomePage> createState() => HomePageState();

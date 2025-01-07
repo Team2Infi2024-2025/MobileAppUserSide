@@ -33,7 +33,6 @@ dependencies:
   supabase_flutter: ^2.0.0
   flutter:
     sdk: flutter
-  sqflite:
   path:
 
   share_plus: ^6.0.0
@@ -52,7 +51,7 @@ dependencies:
   http: ^0.13.6
   uuid: ^4.4.2
   widget_marker_google_map: ^0.0.2
-  google_maps_flutter: ^2.9.0
+  google_maps_flutter: ^2.10.0
   widget_to_marker: ^1.0.6
   icon_decoration: ^2.0.2
   google_fonts: ^4.0.4
@@ -62,6 +61,7 @@ dependencies:
   webview_flutter: ^4.10.0
   flutter_html: ^3.0.0-beta.2
   html: ^0.15.4
+  sign_in_with_apple: ^6.1.4
 
 
   # The following adds the Cupertino Icons font to your application.
@@ -98,6 +98,11 @@ flutter:
 
   # For details regarding adding assets from package dependencies, see
   # https://flutter.dev/assets-and-images/#from-packages
+
+    - assets/image/logo.png
+    - assets/image/logo2.png
+    - assets/image/loading.gif
+    - assets/image/placeholder.png
 
   fonts:
     - family: Delius

@@ -17,11 +17,8 @@ class Account extends StatelessWidget {
   Widget build(BuildContext context) {
     return Padding(
         padding: const EdgeInsets.only(top: 45.0), // Add padding to the top
-        child: Scaffold(
-          appBar: AppBar(
-            title: const Text('Sample Text'),
-          ),
-        )
+        child: const Text('Sample Text')
+
     );
   }
 }

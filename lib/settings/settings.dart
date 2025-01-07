@@ -1,10 +1,13 @@
+// packages
 import 'package:flutter/material.dart';
-import 'package:localstorage/localstorage.dart';
 import 'package:rflutter_alert/rflutter_alert.dart';
 
-import '../Helpers/stream_signal.dart';
-import '../Startup/main.dart';
-import '../helpers/global_methods.dart';
+// pages
+import '../global_content/static_content/global_methods.dart';
+
+/// quick page which displays settings and other import info
+///
+/// viewable via top bar of the application
 
 class Settings extends StatefulWidget {
   Settings({super.key});
@@ -88,7 +91,7 @@ class _SettingsState extends State<Settings> {
                                 TextButton(
                                     onPressed: () {
                                       GlobalMethods.launchURL(
-                                          'https://forms.office.com/pages/responsepage.aspx?id=4vjWLNg-okKNt2o-XhA8E3sdf-IDjQtMpHPPhgI3s11UQzFSNFBTNzhVNVZFSkZOR0U1V0YwWFUyVC4u&origin=lprLink');
+                                          'FEEDBACK LINK');
                                     },
                                     child: const Text(
                                         'Fill out our feedback form!',
@@ -112,10 +115,10 @@ class _SettingsState extends State<Settings> {
                             color: Colors.blue,
                             borderRadius: BorderRadius.circular(10)),
                         height: 35,
-                        child: Row(
+                        child: const Row(
                           mainAxisSize: MainAxisSize.min,
                           crossAxisAlignment: CrossAxisAlignment.start,
-                          children: const [
+                          children: [
                             Icon(Icons.feedback, color: Colors.white),
                             Text(
                               ' Give Us Some Feedback! ',

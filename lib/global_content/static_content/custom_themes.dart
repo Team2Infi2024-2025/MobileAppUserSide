@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../Settings/settings.dart';
+import '../../Settings/settings.dart';
 
 /*
 Themes page
@@ -9,6 +9,45 @@ Can always be expanded on
 Referenced in the settings page
  */
 class CustomThemes {
+
+  static ThemeData mainTheme = ThemeData(
+    colorScheme: const ColorScheme(
+      // Button background, tile colors
+      primary: Color(0xffeef4ff), // Light lavender/blue for buttons
+      // Button text color
+      onPrimary: Color(0xff000000), // Black for readability
+      // Primary background color
+      primaryContainer: Color(0xffffffff), // Clean white background
+      // Links and accent colors
+      secondary: Color(0xff6a5acd), // Medium purple for links and highlights
+      // Text color on secondary
+      onSecondary: Color(0xffffffff), // White text on secondary
+      // Secondary background color
+      secondaryContainer: Color(0xffe8eaf6), // Slightly darker lavender for containers
+      // Button outline or inactive button color
+      tertiary: Color(0xffdfe4fc), // Very light blue
+      // Tertiary text color
+      onTertiary: Color(0xff000000), // Black for tertiary text
+      // Appbar and navbar
+      surface: Color(0xffffffff), // Pure white
+      // Shadow color for elevated elements
+      shadow: Color(0xffd0d0d0), // Light gray for subtle shadows
+      // Default text color
+      onSurface: Color(0xff000000), // Black for general text
+      // Decorations (rounded shapes)
+      surfaceContainer: Color(0xffeef4ff), // Same as button background
+      // Link text color
+      onSurfaceVariant: Color(0xff6a5acd), // Purple for links
+      error: Color(0xffff6f6f), // Light red for error
+      onError: Color(0xffffffff), // White for text on error
+      brightness: Brightness.light,
+    ),
+    buttonTheme: const ButtonThemeData(
+      buttonColor: Color(0xffeef4ff), // Light blue for buttons
+      textTheme: ButtonTextTheme.primary, // Ensures button text matches the primary color
+    ),
+  );
+
 
   static Map<String, ThemeData> themeData = {
     // follow formatting
