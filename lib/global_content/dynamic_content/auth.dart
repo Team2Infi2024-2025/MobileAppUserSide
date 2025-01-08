@@ -10,7 +10,9 @@ import 'package:supabase_flutter/supabase_flutter.dart';
 import 'database.dart';
 
 /*
-Similar to the database file, except this is used specifically for auth functions
+Similar to the database file, except this is used specifically for auth functions.
+
+Not many functions here yet, but the idea is as oath expands and other sign ins get included, database will get messy.
  */
 
 // class to call helpers from

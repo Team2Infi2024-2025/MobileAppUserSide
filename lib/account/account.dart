@@ -9,6 +9,8 @@ import 'package:flutter/material.dart';
   - [] need user management completed anyways
  */
 
+/// also include health history?
+
 class Account extends StatelessWidget {
 
   const Account({super.key});

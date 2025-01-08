@@ -1,9 +1,11 @@
 import 'dart:async';
 
 /*
+
 Sets up content streams neccessary for certain flutter items.
 - particularly dynamic items
 - sends things back and forth -> kinda similar to react states
+
  */
 
 class StreamSignal{

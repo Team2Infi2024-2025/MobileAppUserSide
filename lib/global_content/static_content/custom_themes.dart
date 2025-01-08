@@ -4,12 +4,12 @@ import '../../Settings/settings.dart';
 
 /*
 Themes page
-Allows for changing color scheme
-Can always be expanded on
-Referenced in the settings page
+Allows for changing color scheme.
+Referenced in the settings page, and throughout the app to determine colors to be used.
  */
 class CustomThemes {
 
+  /// main theme which is both the starting theme, and the theme for the opening pages of the app
   static ThemeData mainTheme = ThemeData(
     colorScheme: const ColorScheme(
       // Button background, tile colors

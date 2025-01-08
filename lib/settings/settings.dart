@@ -6,7 +6,7 @@ import 'package:rflutter_alert/rflutter_alert.dart';
 import '../global_content/static_content/global_methods.dart';
 
 /// quick page which displays settings and other import info
-///
+
 /// viewable via top bar of the application
 
 class Settings extends StatefulWidget {

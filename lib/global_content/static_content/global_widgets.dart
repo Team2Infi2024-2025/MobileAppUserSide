@@ -1,6 +1,16 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
+/*
+
+Central place for widgets which are reused are to go.
+
+Common that text, and other things may be re-used.
+
+Also location where to bring in outside widgets, or take things other people have made to avoid having to make a whole widget on your own.
+
+ */
+
 class GlobalWidgets{
 
   static Widget textBubble(BuildContext context,

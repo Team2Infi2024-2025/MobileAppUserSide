@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
 
 /*
-intermediary loading page
+
+Intermediary loading page to display whenever there is any delays in the app.
+
+Rather than just leaving the app blank, develops general branding and themeing the app is looking to use.
  */
 
 class StaticLoad extends StatelessWidget {
