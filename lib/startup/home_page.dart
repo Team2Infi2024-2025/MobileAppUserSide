@@ -11,10 +11,11 @@ import '../global_content/dynamic_content/stream_signal.dart';
 import '../global_content/static_content/global_widgets.dart';
 
 /*
-
 The main purpose of this class is to make the surrounding bars on the screen.
 - makes the bottom navigation bar
 - makes the top bar
+
+Once signed in, this is the viewable page
 
 */
 
@@ -41,8 +42,6 @@ class HomePageState extends State<HomePage> {
 
   // setup for a navigation bar
   int pageIndex = 1;
-
-  // references all the classes that I want to be able to be accessed from the bottom nav bar
 
   // builds 'home page' -> page which loads the main app
   @override

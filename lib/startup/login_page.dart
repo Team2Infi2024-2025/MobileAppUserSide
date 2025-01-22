@@ -1,6 +1,5 @@
 // packages
 import 'package:flutter/material.dart';
-import 'package:sign_in_with_apple/sign_in_with_apple.dart';
 import 'package:student_health_tracker/main.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
 

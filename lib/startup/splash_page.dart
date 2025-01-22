@@ -8,11 +8,12 @@ import '../global_content/static_content/static_pages/static_load.dart';
 import 'home_page.dart';
 
 /*
-
 Page to redirect users to the appropriate page depending on the initial auth state.
 - Ensures auth, if not, forces auth, which improves security. Also allows for RLS to be implemented properly.
 
 Pushes users to app if have a current session, otherwise, need to go to login / sign in page
+
+Page is called in main
 
  */
 
@@ -36,6 +37,7 @@ class SplashPageState extends State<SplashPage> {
     // await for for the widget to mount
     await Future.delayed(Duration.zero);
 
+    // get session from supabase
     final session = supabase.auth.currentSession;
 
     if (session == null) {

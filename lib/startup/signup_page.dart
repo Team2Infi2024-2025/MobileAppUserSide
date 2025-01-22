@@ -1,6 +1,5 @@
 // packages
 import 'package:flutter/material.dart';
-import 'package:sign_in_with_apple/sign_in_with_apple.dart';
 import 'package:student_health_tracker/main.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
 
@@ -16,6 +15,7 @@ Register account page.
 - From splash page, then creates account in supabase.
 - also allows you to sign up anonymously
   - 'guest' session
+
  */
 
 class Signup extends StatefulWidget {
@@ -27,9 +27,6 @@ class Signup extends StatefulWidget {
 
 class _SignupState extends State<Signup> {
   final ColorScheme colorScheme = CustomThemes.mainTheme.colorScheme;
-
-  // ensure not loading
-  final bool _isLoading = false;
 
   String ppString = '';
   bool ppAgree = false;

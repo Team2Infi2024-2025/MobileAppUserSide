@@ -12,6 +12,12 @@ import '../global_content/static_content/global_widgets.dart';
 import 'home_page.dart';
 import 'login_page.dart';
 
+/*
+Main page for logins.
+
+Sign in, sign up, or sign in as a guest.
+
+ */
 class WelcomePage extends StatelessWidget {
   const WelcomePage({super.key});
 
