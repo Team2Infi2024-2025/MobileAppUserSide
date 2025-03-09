@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
+import '../../global_content/static_content/custom_themes.dart';
 
 /*
 Initially select notification preferences before going to notification center.
@@ -21,40 +22,40 @@ class _NotificationPreferencesState extends State<NotificationPreferences> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white,
+      backgroundColor: CustomThemes.mainTheme.colorScheme.primaryContainer,
       appBar: AppBar(
         title: const Text('Notification Center'),
-        backgroundColor: Colors.blue,
+        backgroundColor: CustomThemes.mainTheme.colorScheme.primary,
       ),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            const Text(
+            Text(
               'Information regarding common and\ncurrent health information.',
               style: TextStyle(
                 fontSize: 14,
-                color: Colors.black54,
+                color: CustomThemes.mainTheme.colorScheme.onSurface,
               ),
             ),
             const SizedBox(height: 20),
             Container(
               padding: const EdgeInsets.all(12),
               decoration: BoxDecoration(
-                color: Colors.grey[100],
+                color: CustomThemes.mainTheme.colorScheme.secondaryContainer,
                 borderRadius: BorderRadius.circular(8),
               ),
               child: Row(
                 children: [
-                  const Text(
+                  Text(
                     'Location: ',
-                    style: TextStyle(fontWeight: FontWeight.w500),
+                    style: TextStyle(fontWeight: FontWeight.w500, color: CustomThemes.mainTheme.colorScheme.onSurface),
                   ),
                   Text(
                     'Blacksburg, VA',
                     style: TextStyle(
-                      color: Colors.blue[700],
+                      color: CustomThemes.mainTheme.colorScheme.onSurfaceVariant,
                       fontWeight: FontWeight.w500,
                     ),
                   ),
@@ -62,11 +63,12 @@ class _NotificationPreferencesState extends State<NotificationPreferences> {
               ),
             ),
             const SizedBox(height: 24),
-            const Text(
+            Text(
               'General Information',
               style: TextStyle(
                 fontSize: 16,
                 fontWeight: FontWeight.bold,
+                color: CustomThemes.mainTheme.colorScheme.onSurface,
               ),
             ),
             SwitchListTile(
