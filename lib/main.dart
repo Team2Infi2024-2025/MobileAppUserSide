@@ -66,7 +66,7 @@ class MyApp extends StatelessWidget {
 								builder: (context, snapshot){
 									// starting page of the application
 									// set to splashpage
-									return const NotificationPreferences();})
+									return const SplashPage();})
 					);
 				});
 	}
