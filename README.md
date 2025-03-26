@@ -1,16 +1,34 @@
-# student_health_tracker
+# Student Health Tracker
 
-A new Flutter project.
+Welcome to the Student Health Tracker project! This Flutter application is designed to help students manage their health and wellness effectively, by providing analysis based on their location.
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+This project serves as a comprehensive starting point for building the Flutter application. Follow the instructions below to set up, demo, and prepare the application for production.
 
-A few resources to get you started if this is your first Flutter project:
+### Prerequisites
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+Before you begin, ensure you have the following installed on your machine:
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+- Flutter SDK: [Installation Guide](https://docs.flutter.dev/get-started/install)
+- Dart SDK: Included with Flutter
+- An IDE (e.g., Android Studio, Visual Studio Code)
+
+### Installation
+
+1. Clone the repository:
+   ```bash
+   git https://github.com/Team2Infi2024-2025/MobileAppUserSide
+   ```
+
+2. Install dependencies:
+   ```bash
+   flutter pub get
+   ```
+
+### Running the Application
+
+To run the application on your local machine, use the following command:
+```flutter run```
+
+Can specify different things like devices using the ```-d``` flag, for example ```flutter run -d chrome```
