@@ -17,9 +17,9 @@ class Account extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-        padding: const EdgeInsets.only(top: 45.0), // Add padding to the top
-        child: const Text('Sample Text')
+    return const Padding(
+        padding: EdgeInsets.only(top: 45.0), // Add padding to the top
+        child: Text('Sample Text')
 
     );
   }

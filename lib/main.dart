@@ -9,7 +9,6 @@ import 'package:student_health_tracker/global_content/static_content/custom_them
 import 'package:student_health_tracker/startup/splash_page.dart';
 import 'global_content/dynamic_content/database.dart';
 import 'global_content/dynamic_content/stream_signal.dart';
-import 'notification_center/notification_preferences.dart';
 
 /*
 Dart entrypoint for app.

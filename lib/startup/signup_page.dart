@@ -19,7 +19,7 @@ Register account page.
  */
 
 class Signup extends StatefulWidget {
-  Signup({super.key});
+  const Signup({super.key});
 
   @override
   State<Signup> createState() => _SignupState();
@@ -75,7 +75,7 @@ class _SignupState extends State<Signup> {
       await DataBase.init();
       if(mounted){
         Navigator.of(context).pushAndRemoveUntil(
-          MaterialPageRoute(builder: (context) => HomePage()),
+          MaterialPageRoute(builder: (context) => const HomePage()),
               (route) => false,
         );
       }

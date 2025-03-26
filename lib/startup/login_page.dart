@@ -49,7 +49,7 @@ class _LoginState extends State<Login> {
       await DataBase.init();
       if (mounted) {
         Navigator.of(context).pushAndRemoveUntil(
-          MaterialPageRoute(builder: (context) => HomePage()),
+          MaterialPageRoute(builder: (context) => const HomePage()),
               (route) => false,
         );
       }

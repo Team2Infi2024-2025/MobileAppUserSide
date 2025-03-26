@@ -10,7 +10,7 @@ import '../global_content/static_content/global_methods.dart';
 /// viewable via top bar of the application
 
 class Settings extends StatefulWidget {
-  Settings({super.key});
+  const Settings({super.key});
 
   @override
   State<Settings> createState() => _SettingsState();
@@ -70,7 +70,7 @@ class _SettingsState extends State<Settings> {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Text("  Feedback",
+                  const Text("  Feedback",
                       style: TextStyle(
                           fontWeight: FontWeight.w500,
                           fontSize: 25,

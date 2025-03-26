@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:supabase_flutter/supabase_flutter.dart';
 
 /*
 
@@ -11,6 +10,8 @@ Essentially need to locally store a list of all notifs sent out (can back up to 
  */
 
 class NotificationCenter extends StatefulWidget {
+  const NotificationCenter({super.key});
+
 	@override
 	_NotificationCenterState createState() => _NotificationCenterState();
 }
@@ -46,7 +47,7 @@ class _NotificationCenterState extends State<NotificationCenter> {
 				backgroundColor: Colors.blue,
 			),
 			body: notifications.isEmpty
-					? Center(child: CircularProgressIndicator())
+					? const Center(child: CircularProgressIndicator())
 					: ListView.builder(
 							itemCount: notifications.length,
 							itemBuilder: (context, index) {
@@ -60,22 +61,22 @@ class _NotificationCenterState extends State<NotificationCenter> {
 											children: [
 												Text(
 													notification['title'] ?? 'No Title',
-													style: TextStyle(
+													style: const TextStyle(
 														fontWeight: FontWeight.bold,
 														fontSize: 16,
 													),
 												),
-												SizedBox(height: 8),
+												const SizedBox(height: 8),
 												Text(
 													notification['message'] ?? 'No Message',
-													style: TextStyle(fontSize: 14),
+													style: const TextStyle(fontSize: 14),
 												),
-												SizedBox(height: 8),
+												const SizedBox(height: 8),
 												Text(
 													notification['date'] != null
 															? notification['date'].toString()
 															: 'No Date',
-													style: TextStyle(fontSize: 12, color: Colors.grey),
+													style: const TextStyle(fontSize: 12, color: Colors.grey),
 												),
 											],
 										),

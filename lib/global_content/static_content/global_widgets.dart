@@ -101,7 +101,7 @@ class GlobalWidgets{
 
     colorScheme ??= Theme.of(context).colorScheme;
 
-    void _button() {
+    void button() {
       if (currentPage + 1 < children.length) {
         controller.animateToPage(currentPage + 1,
             duration: const Duration(milliseconds: 500),
@@ -113,7 +113,7 @@ class GlobalWidgets{
       }
     }
 
-    bool _canProgress(bool active) {
+    bool canProgress(bool active) {
       if (currentPage < conditions!.length) {
         if (conditions[currentPage](active)) {
           return true;
@@ -127,7 +127,7 @@ class GlobalWidgets{
       WidgetsBinding.instance.addPostFrameCallback((_) {
         if (autoprogress && currentPage < conditions!.length) {
           if (conditions[currentPage](false)) {
-            _button();
+            button();
           }
         }
       });
@@ -196,13 +196,13 @@ class GlobalWidgets{
                                           vertical: 5, horizontal: 20),
                                       child: Opacity(
                                           opacity:
-                                          !labelprogress || _canProgress(false)
+                                          !labelprogress || canProgress(false)
                                               ? 1
                                               : 0.75,
                                           child: ElevatedButton(
                                             onPressed: () {
-                                              if (_canProgress(true)) {
-                                                _button();
+                                              if (canProgress(true)) {
+                                                button();
                                               }
                                             },
                                             style: ElevatedButton.styleFrom(

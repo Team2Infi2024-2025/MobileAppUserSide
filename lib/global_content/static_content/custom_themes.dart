@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 
-import '../../Settings/settings.dart';
 
 /*
 Themes page

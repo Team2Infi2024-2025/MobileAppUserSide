@@ -1,8 +1,6 @@
 import 'dart:convert';
 import 'package:crypto/crypto.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:gotrue/src/types/user_attributes.dart';
 import 'package:sign_in_with_apple/sign_in_with_apple.dart';
 import 'package:student_health_tracker/global_content/static_content/global_widgets.dart';
 import 'package:student_health_tracker/main.dart';
@@ -26,7 +24,7 @@ class AuthService {
       await DataBase.init();
       if (context.mounted) {
         Navigator.of(context).pushAndRemoveUntil(
-          MaterialPageRoute(builder: (context) => HomePage()),
+          MaterialPageRoute(builder: (context) => const HomePage()),
           (route) => false,
         );
       }
@@ -64,7 +62,7 @@ class AuthService {
     } finally {
       // sign out, push back to home page
       await supabase.auth.signOut();
-      GlobalWidgets.swipePage(SplashPage());
+      GlobalWidgets.swipePage(const SplashPage());
     }
   }
 

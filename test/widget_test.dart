@@ -6,6 +6,8 @@
 // tree, read text, and verify that the values of widget properties are correct.
 
 /// this is a sample of a test for an interaction with a widget
+library;
+
 
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';

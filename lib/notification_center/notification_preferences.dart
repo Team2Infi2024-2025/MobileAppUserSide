@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:supabase_flutter/supabase_flutter.dart';
 import '../../global_content/static_content/custom_themes.dart';
 
 /*
@@ -8,7 +7,7 @@ Allows users to customize which types of notifications they want to receive.
 */
 
 class NotificationPreferences extends StatefulWidget {
-  const NotificationPreferences({Key? key}) : super(key: key);
+  const NotificationPreferences({super.key});
 
   @override
   _NotificationPreferencesState createState() => _NotificationPreferencesState();

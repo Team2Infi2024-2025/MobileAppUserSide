@@ -102,7 +102,7 @@ class WelcomePage extends StatelessWidget {
             ElevatedButton(
               onPressed: () {
                 Navigator.push(
-                    context, GlobalWidgets.swipePage(Signup(), appBar: true));
+                    context, GlobalWidgets.swipePage(const Signup(), appBar: true));
               },
               style: ElevatedButton.styleFrom(
                   side: BorderSide(color: colorScheme.onSurface, width: 1),
@@ -142,7 +142,7 @@ class WelcomePage extends StatelessWidget {
       await DataBase.init();
       if (context.mounted) {
         Navigator.of(context).pushAndRemoveUntil(
-          MaterialPageRoute(builder: (context) => HomePage()),
+          MaterialPageRoute(builder: (context) => const HomePage()),
               (route) => false,
         );
       }
