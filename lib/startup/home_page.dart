@@ -18,9 +18,8 @@ The main purpose of this class is to make the surrounding bars on the screen.
 Once signed in, this is the viewable page
 
 */
-
 class HomePage extends StatefulWidget {
-	const HomePage({super.key, Key? key});
+	const HomePage({Key? key}) : super(key: key);
 
 	static StreamController<StreamSignal> homePageStream =
 		StreamController<StreamSignal>();
