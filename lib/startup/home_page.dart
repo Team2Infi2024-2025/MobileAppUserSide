@@ -19,7 +19,7 @@ Once signed in, this is the viewable page
 
 */
 class HomePage extends StatefulWidget {
-	const HomePage({Key? key}) : super(key: key);
+	const HomePage({super.key});
 
 	static StreamController<StreamSignal> homePageStream =
 		StreamController<StreamSignal>();
@@ -79,7 +79,7 @@ class HomePageState extends State<HomePage> {
 										setState(() {
 											Navigator.push(
 													context,
-													GlobalWidgets.swipePage(Settings(),
+													GlobalWidgets.swipePage(const Settings(),
 															title: 'Settings'));
 										});
 									},
