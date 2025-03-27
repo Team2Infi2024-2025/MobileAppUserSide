@@ -32,3 +32,19 @@ To run the application on your local machine, use the following command:
 ```flutter run```
 
 Can specify different things like devices using the ```-d``` flag, for example ```flutter run -d chrome```
+
+## Navigating the Project
+
+The project is organized into several key directories and files to help you understand its structure and functionality:
+
+- **lib/**: This directory contains the main Dart code for the application. You will find the main entry point in `main.dart`, along with various screens and widgets organized in subdirectories.
+  
+- **assets/**: This folder holds all the static assets such as images, fonts, and other resources used in the application. Make sure to reference these assets correctly in your code.
+
+- **test/**: This directory is where you can find the unit and widget tests for the application. It is important to write tests to ensure the reliability of your code.
+
+- **pubspec.yaml**: This file manages the dependencies for your Flutter project. You can add or update packages here as needed.
+
+- **README.md**: This file provides an overview of the project, installation instructions, and other relevant information.
+
+To navigate the project effectively, familiarize yourself with these directories and files. You can use your IDE's file explorer to quickly access different parts of the project.
