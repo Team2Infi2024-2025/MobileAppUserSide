@@ -3,6 +3,7 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:localstorage/localstorage.dart';
+import 'package:student_health_tracker/Settings/settings.dart';
 
 // in project pages
 import 'package:student_health_tracker/global_content/static_content/custom_themes.dart';
@@ -65,7 +66,7 @@ class MyApp extends StatelessWidget {
 								builder: (context, snapshot){
 									// starting page of the application
 									// set to splashpage
-									return const SplashPage();})
+									return const Settings();})
 					);
 				});
 	}
