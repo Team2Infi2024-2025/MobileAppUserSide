@@ -4,9 +4,13 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:localstorage/localstorage.dart';
 import 'package:student_health_tracker/Settings/settings.dart';
+import 'package:student_health_tracker/map_page/map_page.dart';
+import 'package:student_health_tracker/chat/chat.dart';
 
 // in project pages
 import 'package:student_health_tracker/global_content/static_content/custom_themes.dart';
+import 'package:student_health_tracker/notification_center/notification_center.dart';
+import 'package:student_health_tracker/notification_center/notification_page_router.dart';
 import 'package:student_health_tracker/startup/splash_page.dart';
 import 'global_content/dynamic_content/database.dart';
 import 'global_content/dynamic_content/stream_signal.dart';
@@ -66,13 +70,12 @@ class MyApp extends StatelessWidget {
 								builder: (context, snapshot){
 									// starting page of the application
 									// set to splashpage
-									return const Settings();})
+									return StudentHealthChatApp();})
 					);
 				});
 	}
 }
 
-// for snackbar (bottom bar which pops up with hints)
 extension ContextExtension on BuildContext {
 	void showSnackBar(String message, {bool isError = false}) {
 		ScaffoldMessenger.of(this).showSnackBar(
