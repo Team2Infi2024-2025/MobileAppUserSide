@@ -1,6 +1,7 @@
 // packages
 import 'package:flutter/material.dart';
 import 'package:rflutter_alert/rflutter_alert.dart';
+import 'package:url_launcher/url_launcher.dart'; // Import the url_launcher package
 
 // pages
 import '../global_content/static_content/global_methods.dart';
@@ -23,7 +24,7 @@ class _SettingsState extends State<Settings> {
       context: context,
       builder: (_) => AlertDialog(
         title: Text(title),
-        content: const Text("Hii"),
+        content: const Text("Coming Soon"),
         actions: [
           TextButton(
             onPressed: () => Navigator.pop(context),
@@ -76,7 +77,7 @@ class _SettingsState extends State<Settings> {
             padding: const EdgeInsets.symmetric(horizontal: 20),
             child: Row(
               children: [
-                const Expanded(
+                Expanded(
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
@@ -86,12 +87,19 @@ class _SettingsState extends State<Settings> {
                               fontWeight: FontWeight.bold,
                               color: Colors.black)),
                       SizedBox(height: 5),
-                      Text(
-                        'Read Terms and Conditions',
-                        style: TextStyle(
-                            fontSize: 16,
-                            color: Colors.lightBlue,
-                            fontWeight: FontWeight.w500),
+                      GestureDetector(
+                        onTap: () async {
+                          final url = Uri.parse('https://docs.flutter.dev/tos');
+                            await launchUrl(url);
+                        },
+                        child: Text(
+                          'Read Terms and Conditions',
+                          style: TextStyle(
+                              fontSize: 16,
+                              color: Colors.lightBlue,
+                              fontWeight: FontWeight.w500,
+                              decoration: TextDecoration.underline),
+                        ),
                       )
                     ],
                   ),
