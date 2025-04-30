@@ -31,7 +31,7 @@ serve(async (req) => {
         console.log("OpenAI API key is present");
 
         const openai = new OpenAI({ apiKey });
-        const query = `Based on the following medical information, suggest a possible diagnosis and potential next steps: \n\nSymptoms: ${symptoms}\nMedical History: ${medicalHistory || "Not provided"}\nAge: ${age || "Not provided"}\nGender: ${gender || "Not provided"}\nLifestyle Factors: ${lifestyleFactors || "Not provided"}.`;
+        const query = `Based on the following medical information, suggest a possible diagnosis and potential next steps: \n\nSymptoms: ${symptoms}\nMedical History: ${medicalHistory || "Not provided"}\nAge: ${age || "Not provided"}\nGender: ${gender || "Not provided"}\nLifestyle Factors: ${lifestyleFactors || "Not provided"}. Also just give general health information if prompted to.`;
         
         console.log("Sending query to OpenAI:", query);
 
