@@ -71,6 +71,8 @@ dependencies:
 
   crypto: any
   timezone: any
+  flutter_map: ^4.0.0
+  latlong2: ^0.8.2
 dev_dependencies:
   flutter_test:
     sdk: flutter
