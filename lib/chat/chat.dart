@@ -45,13 +45,8 @@ class _ChatScreenState extends State<ChatScreen> {
     });
 
     // Call the GPT diagnose function using Supabase
-    final response = await Supabase.instance.client.functions.invoke(
-      'gpt-diagnose',
-      body: json.encode({
-        'symptoms': text,
-        // Add other parameters if needed
-      }),
-    );
+    final response = await Supabase.instance.client.functions
+        .invoke('gpt-diagnose', body: {'idea', text});
 
     if (response != null) {
       final data = response.data;
